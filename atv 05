@@ -1,30 +1,7 @@
-#centralização de base de dados 
-binomialneg <- rnbinom(300, mu = 3, size = 10)
+base <- c(1:10)
 
-poisson <- rpois(300, 3)
+#média
+mean(base)
 
-hist(binomialneg)
-hist(poisson)
-
-binomialneg + poisson
-
-poisson + 100
-
-mean(poisson)
-
-# centralizando a base poisson
-poissonCentral <- poisson - mean(poisson)
-hist(poissonCentral)
-hist(binomialneg)
-
-# centralizando a base caret
-library(caret)
-caret <- rpois (300,3)
-hist(binomialneg)
-hist(caret)
-binomialneg + caret
-caret + 100
-mean(caret)
-caretCentral <- caret - mean(caret)
-hist(caretCentral)
-hist(binomialneg)
+#centralizando
+baseCentral <- base - mean(base)
